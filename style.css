@@ -1,0 +1,111 @@
+:root {
+    --clr-primary: #A7B765;
+    --clr-accent: #1C5586;
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    color: #444;
+}
+
+.note {
+    position: fixed;
+    width: 50%;
+    max-width: fit-content;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--clr-primary);
+    transition: color .5s;
+    white-space: nowrap;
+}
+
+a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--clr-primary);
+    transition: width .5s, background-color .5s;
+}
+
+a:hover,
+a:focus {
+    color: var(--clr-accent);
+}
+
+:is(a:hover, a:focus)::after {
+    width: 100%;
+    background-color: var(--clr-accent);
+}
+
+.scroll-container {
+    height: 1000vh;
+}
+
+.svg-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+svg {
+    width: 100%;
+}
+
+.lottie {
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    width: 70px;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 5vh;
+    font-weight: 900;
+    color: white;
+}
+
+footer::before {
+    content: '';
+    display: block;
+    width: 400px;
+    max-width: 75%;
+    height: 150px;
+    background-color: orange;
+    grid-row: 1;
+    grid-column: 1;
+    transform: skew(15deg, 5deg);
+}
+
+footer::after {
+    content: 'idk, trains?';
+    display: block;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+}
