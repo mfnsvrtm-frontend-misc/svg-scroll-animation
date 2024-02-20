@@ -12,6 +12,7 @@ body {
 
 .note {
     position: fixed;
+    z-index: 1;
     width: 50%;
     max-width: fit-content;
     top: 20px;
@@ -96,7 +97,7 @@ footer::before {
     width: 400px;
     max-width: 75%;
     height: 150px;
-    background-color: orange;
+    background-color: var(--clr-primary);
     grid-row: 1;
     grid-column: 1;
     transform: skew(15deg, 5deg);
