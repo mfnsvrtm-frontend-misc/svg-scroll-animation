@@ -1,6 +1,6 @@
 const train1 = document.querySelector('#Train1');
 const train2 = document.querySelector('#Train2');
-const scrollArea = document.body;
+const scrollArea = document.querySelector('.scroll-container');
 const lottie = document.querySelector('.lottie');
 
 updateTrains();
